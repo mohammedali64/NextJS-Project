@@ -3,7 +3,6 @@ import Image from "next/image";
 export default async function ProductDetailPage({ params }) {
   const { id } = params;
 
-  // Fetch product details
   const res = await fetch(`https://dummyjson.com/products/${id}`, {
     next: { revalidate: 60 },
   });
